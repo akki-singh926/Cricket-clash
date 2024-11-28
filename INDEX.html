@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="GAME.CSS">
+</head>
+<body> 
+    <div class="container">
+        <!-- Start Game Button -->
+        <div class="start-screen">
+            <h1>Welcome to the Cricket Game!</h1>
+            <label for="ball-count">Enter number of balls (attempts): </label>
+            <input type="number" id="ball-count" min="1" max="20" value="6">
+            <button id="start-game" class="start-button">Start Game</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div class="game-screen">
+            <div class="nav">
+                <h1>CRICKET-MATCH</h1>
+            </div>
+            <div class="counters">
+                <h2>Balls Left: <span id="ball-counter">10</span></h2>
+                <h2>Score: <span id="score-counter">0</span></h2>
+            </div>
+            <div class="container2">
+                <button class="game-button" data-choice="bat">BAT</button>
+                <button class="game-button" data-choice="ball">BALL</button>
+                <button class="game-button" data-choice="stump">STUMP</button>
+            </div>
+        </div>
+
+        <!-- Game Over Popup -->
+        <div id="game-over-popup" class="popup-overlay hidden">
+            <div class="popup-content">
+                <h1 id="game-result"></h1>
+                <p>Your final score: <span id="final-score">0</span></p>
+                <button id="play-again" class="close-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="GAME.JS"></script>
+</body>
+</html>
